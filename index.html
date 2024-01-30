@@ -2,16 +2,131 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <title>Books Hub</title>
         <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet'>
-        <link rel="shortcut icon" href="../BooksHub.github.io/Images/Logo.svg" type="image/x-icon"/>
-        <link rel="stylesheet" href="../BooksHub/Style-Script/StyleFile/Style.css"/>
+        <link rel="shortcut icon" type="image/x-icon" href="../BooksHub/Images/Logo.png">
+        <link rel="stylesheet" type="text/css" href="../BooksHub/mainfiles/StyleFile/Style.css"/>
       </head>
 <body>
 
+    <button onclick="toggleDarkMode()" id="Light-Dark">
+        <img src="../BooksHub/Images/Property 1=land, Property 2=light.svg" alt="Lightmode" class="light-image">
+        <img src="../BooksHub/Images/Property 1=land, Property 2=dark.svg" alt="Darkmode" class="dark-image">
+         <div class="switch"></div>
+      </button>
+
+   <!-- PRELOADER -->
+   <div id="preloader"></div>
+
+   <div id="homeback">
+    <img src="../BooksHub/Images/HOMEBACKGROUND.svg" id="LightBackImg" alt="HOMEBACKGROUND" style="width: 100%; display: block;">
+    <img src="../BooksHub/Images/DARKHOMEBACKGROUND.svg" id="DarkBackImg" alt="DARKHOMEBACKGROUND" style="width: 100%; display: none;">
+   </div>
+
+     <!-- SCROLL INDICATOR -->
+     <div class="scroll-indicator"></div> 
+
+       <!-- NavBar -->
+    <nav class="navbar">
+        <div class="logo">
+          <a href="../BooksHub/index.html">
+            <h1 id="mainsitelogo">
+              BooksHub
+            </h1>
+          </a>
+        </div>
+        
+        <button class="menu-toggle">
+         <img src="../BooksHub.github.io/Images/Toggle.svg" alt="toggleImg">
+        </button>
+        <ul class="nav-links">
+          <li><a href="../BooksHub/index.html">Home</a></li>
+          <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/books.html" target="_blank">Books</a></li>
+          <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/contact.html" target="_blank">Contact</a></li>
+          <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/about.html" target="_blank">About</a></li>
+          <li><a href="../BooksHub.github.io/BooksHub-HtmlFiles/Clubs.html" target="_blank">Club</a></li>
+        </ul>
+        <a href="https://forms.gle/7HaYL5PqKcEMPyv6A" target="_blank" class="E-BookSub">Submit Your E-Book</a>
+      </nav>
+
+  <!-- SITE SMALL INTO -->
+     <div class="introbox">
+        <a class="introboxlink" href="../BooksHub.github.io/BooksHub-HtmlFiles/books.html" target="_blank">
+        <div class="introbox1">
+          <img src="../BooksHub/Images/readfree.svg" alt="">
+          <h1>
+            Read Free Books Online
+          </h1>
+          <p>
+            Dive into Endless Stories at BooksHub. Free Reads Await!
+          </p>
+        </div>
+      </a>
+  
+      <div class="introbox2" onclick="copyWebsiteLink()">
+        <img src="../BooksHub/Images/invite.svg" alt="">
+        <h1>
+          Invite Your Friends
+        </h1>
+        <p>
+          Share the Joy of Reading! Invite Friends to Explore BooksHub Together.
+        </p>
+      </div>
+  
+        <div class="introbox3">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJk0LIigoPdv_Gso1sAaDpp6AcpOhWX6zlEYbyg4Zu997h3Q/viewform?pli=1" class="introboxlink" target="_blank">
+          <img src="../BooksHub/Images/share.png" alt="">
+          <h1>
+            Share Your E-books with BooksHub!
+          </h1>
+          <p>
+            Expand Our Library! Contribute Your E-books to BooksHub's Collection.
+          </p>
+        </div>
+      </a>
+      </div>
+
+      <p id="FBText">Featured Books</p>
     
+      <div class="book-grid">
+        <a class="book-container" href="https://655cbb4593b5811284eef8fe--onepiecebook.netlify.app/mobile/index.html" target="_blank">
+          <div class="book">
+            <img src="../BooksHub/BooksImages/Animeimg's/OnePiece.jpg" alt="Manga" />
+          </div>
+        </a>
+  
+        <a class="book-container" href="https://6564bea6b55722007ad3c042--spidermanbook.netlify.app/mobile/index.html" target="_blank">
+          <div class="book">
+            <img src="../BooksHub/BooksImages/Comicimg's/spider-man.png" alt="Comic" />
+          </div>
+        </a>
+  
+        <a class="book-container" href="https://heymomwhatisdiversitybook.netlify.app/mobile/index.html" target="_blank">
+          <div class="book">
+            <img src="../BooksHub/BooksImages/Kid-Stories/Hey Mom What is Diversity.png" alt="Kids_Stories" />
+          </div>
+        </a>
+  
+        <a class="book-container" href="https://flowersofevilbook.netlify.app/mobile/index.html" target="_blank">
+          <div class="book">
+            <img src="../BooksHub/BooksImages/Poetry/flowers-of-evil.png" alt="Poetry" />
+          </div>
+        </a>
+  
+        <a class="book-container" href="https://html5book.netlify.app/mobile/index.html" target="_blank">
+          <div class="book">
+            <img src="../BooksHub/BooksImages/Coding/Html.png" alt="Coding" />
+          </div>
+        </a>
+      </div>
+
+      <footer>
+        <div class="footer-bottom">
+          &copy; 2024 BooksHub | Created by Mihir K.
+        </div>
+      </footer>
     
-    <script src="../BooksHub/Style-Script/ScriptFile/Script.js"></script>
+    <script src="../BooksHub/mainfiles/ScriptFile/Script.js"></script>
 </body>
 </html>

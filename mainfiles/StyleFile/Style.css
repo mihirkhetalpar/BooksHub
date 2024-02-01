@@ -29,12 +29,12 @@ a:-webkit-any-link {
     --Light-Primary-Color: #f5f5f5;
     --Light-Text-or-Content-Color: #1E1E1E;
     --Light-Button-or-Highlight-Color: #FFA500;
+    --Common-Text-Color: #5E96FF;
 
     /* DARKMODE */
     --Dark-Primary-Color: #1E1E1E;
     --Dark-Text-or-Content-Color: #FFFFFF;
     --Dark-Button-or-Highlight-Color: #FFA500;
-    --Dark-h1-Color: #5E96FF;
 }
 
 #Light-Dark {
@@ -86,9 +86,16 @@ a:-webkit-any-link {
     display: inline;
 }
 
+@media (max-width: 400px) {
+    #Light-Dark {
+        left: 82%;
+    }
+}
+
 /* PRELOADER */
 
 #preloader {
+    top: 0px;
     background: black url(../StyleFile/IMG/Books-HubPreLoad.gif) no-repeat center center;
     height: 100%;
     width: 100%;
@@ -96,12 +103,40 @@ a:-webkit-any-link {
     z-index: 999;
 }
 
+@media (max-width: 400px) {
+    #preloader {
+        background-size: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* HOME BACKGROUND */
 #homeback {
-    display: flex;
+    display: block;
     position: fixed;
     top: -280px;
     width: 100%;
     z-index: -1;
+}
+
+/* BOOKS BACKGROUND */
+#Booksback {
+    display: flex;
+    position: fixed;
+    top: -222px;
+    width: 100%;
+    z-index: -1;
+}
+
+@media (max-width: 400px) {
+    #homeback {
+        top: 0;
+        width: 720px;
+    }
+
+    #Booksback {}
 }
 
 /* Scroll indicator styles */
@@ -229,7 +264,7 @@ a:-webkit-any-link {
 .nav-links a {
     position: relative;
     text-decoration: none;
-    color: #5E96FF;
+    color: var(--Common-Text-Color);
     -webkit-text-stroke: 1px rgb(31 0 63);
     font-size: 3rem;
     font-weight: 900;
@@ -260,7 +295,93 @@ a:-webkit-any-link {
     border: 2px solid #5E96FF;
 }
 
+#Submit-EB {
+    display: none;
+}
 
+@media (max-width:400px) {
+    .menu-toggle {
+        display: flex;
+        position: fixed;
+        right: 195px;
+        margin: 0;
+        padding: 0;
+        border-width: 0px;
+        padding-inline: 0px;
+        padding-block: 0px;
+        height: 0px;
+        width: 0px;
+    }
+
+    .menu-toggle img {
+        position: relative;
+        height: 90px;
+        width: 80px;
+        top: -40px;
+        left: 30px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        top: 57px;
+        left: 335px;
+        height: max-content;
+        width: 30%;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+        background: rgba(232, 131, 255, 0.3);
+        box-shadow: 0 8px 32px 0 rgba(128, 0, 255, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 10px;
+        border-left: 2px solid rgba(255, 255, 255, 0.18);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        text-align: center;
+        padding: 0px;
+        background-color: transparent;
+        color: var(--Common-Text-Color);
+        text-decoration: none;
+        font-size: 20px;
+        -webkit-text-stroke: 0.5px rgb(31 0 63);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .E-BookSub {
+        display: none;
+    }
+
+    .E-BookSub.show {
+        display: block;
+    }
+
+    #mainsitelogo {
+        position: absolute;
+        top: -50px;
+        left: -10px;
+    }
+
+    #Submit-EB {
+        display: block;
+    }
+}
+
+/* HOME PAGE START HERE 👇 */
+
+/* SITE SMALL INTRO */
 .introbox {
     display: grid;
     position: absolute;
@@ -299,7 +420,7 @@ a:-webkit-any-link {
     width: 200px;
     left: 200px;
     top: 35px;
-    color: var(--Dark-h1-Color);
+    color: var(--Common-Text-Color);
     font-size: 1.4rem;
     cursor: pointer;
 }
@@ -338,7 +459,7 @@ a:-webkit-any-link {
     width: 210px;
     top: 30px;
     left: 720px;
-    color: var(--Dark-h1-Color);
+    color: var(--Common-Text-Color);
     text-align: center;
     font-size: 1.4rem;
     cursor: pointer;
@@ -377,7 +498,7 @@ a:-webkit-any-link {
     width: 200px;
     text-align: center;
     left: 1225px;
-    color: var(--Dark-h1-Color);
+    color: var(--Common-Text-Color);
     font-size: 1.2rem;
     top: 35px;
     cursor: pointer;
@@ -392,6 +513,70 @@ a:-webkit-any-link {
     left: 1250px;
     font-size: 0.8rem;
     cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .introbox {
+        display: grid;
+        position: absolute;
+        top: 100px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        height: max-content;
+        gap: 30px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .introbox1 img{
+        top: 10px;
+        left: 50px;
+    }
+
+    .introbox1 h1{
+        top: -10px;
+        left: 140px;
+    }
+
+    .introbox1 p{
+        top: 55px;
+        left: 155px;
+    }
+
+    .introbox2 img{
+        height: 20%;
+        width: 20%;
+        top: 170px;
+        left: 55px;
+    }
+
+    .introbox2 h1{
+        top: 143px;
+        left: 140px;
+    }
+
+    .introbox2 p{
+        width: 200px;
+        top: 205px;
+        left: 145px;
+    }
+
+    .introbox3 img{
+        top: 325px;
+        left: 50px;
+    }
+
+    .introbox3 h1{
+        font-size: 0.9rem;
+        top: 310px;
+        left: 145px;
+    }
+
+    .introbox3 p{
+        width: 180px;
+        top: 350px;
+        left: 170px;
+    }
 }
 
 #FBText {
@@ -410,6 +595,13 @@ a:-webkit-any-link {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+@media (max-width: 400px) {
+    #FBText{
+        font-size: 35px;
+        top: 65%;
+    }
 }
 
 .book-grid {
@@ -516,6 +708,118 @@ a:-webkit-any-link {
     border-radius: 0 5px 5px 0;
     box-shadow: -10px 0 50px 10px #666;
 }
+
+@media (max-width: 400px) {
+    .book-grid {
+      display: grid;
+      position: relative;
+      grid-template-columns: repeat(2, 1fr);
+      top: 730px;
+      left: 25px;
+      row-gap: 120px;
+      column-gap: 20px;
+      height: 600px;
+    }
+  
+    .book-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1300px;
+      height: 0px;
+      width: 0px;
+    }
+    
+    @keyframes initAnimation {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(-30deg);
+      }
+    }
+    
+    .book {
+      width: 150px;
+      height: 175px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(-30deg);
+      transition: 1s ease;
+      animation: 1s ease 0s 1 initAnimation;
+    }
+    
+    .book-container:hover .book, 
+    .book-container:focus .book {
+      transform: rotateY(0deg);
+    }
+    
+    .book > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: red;
+      width: 150px;
+      height: 175px;
+      transform: translateZ(15px);
+      background-color: #01060f;
+      border-radius: 0 5px 5px 0;
+      box-shadow: 5px 5px 20px #666;
+    }
+    
+    .book::before {
+      position: absolute;
+      content: ' ';
+      background-color: blue;
+      left: 0;
+      top: 1px;
+      width: 28px;
+      height: 173px;
+      transform: translateX(134px) rotateY(90deg);
+      background: linear-gradient(90deg, 
+        #fff 0%,
+        #f9f9f9 5%,
+        #fff 10%,
+        #f9f9f9 15%,
+        #fff 20%,
+        #f9f9f9 25%,
+        #fff 30%,
+        #f9f9f9 35%,
+        #fff 40%,
+        #f9f9f9 45%,
+        #fff 50%,
+        #f9f9f9 55%,
+        #fff 60%,
+        #f9f9f9 65%,
+        #fff 70%,
+        #f9f9f9 75%,
+        #fff 80%,
+        #f9f9f9 85%,
+        #fff 90%,
+        #f9f9f9 95%,
+        #fff 100%
+        );
+    }
+    
+    .book::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: ' ';
+      width: 150px;
+      height: 175px;
+      transform: translateZ(-15px);
+      background-color: #01060f;
+      border-radius: 0 5px 5px 0;
+      box-shadow: -10px 0 50px 10px #666;
+    }
+  }
+
+/* HOME PAGE END HERE 👆 */
+
+
+/* BOOKS PAGE START HERE 👇 */
+
 
 
 /* STYLE FOR FOOTER */

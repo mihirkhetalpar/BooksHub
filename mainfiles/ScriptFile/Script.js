@@ -6,6 +6,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 4000);
 });
 
+// NAVBAR
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+  });
+
+  // Close the nav links if clicked outside the navbar area
+  document.addEventListener("click", function (e) {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove("show");
+    }
+  });
+
+  // Hide the navigation links if window width is more than 400px on load
+  function handleNavDisplay() {
+    if (window.innerWidth > 400) {
+      navLinks.classList.remove("show");
+    }
+  }
+
+  // Listen for window resize and update navigation links display accordingly
+  window.addEventListener("resize", handleNavDisplay);
+
+  // Initially check the window width to show/hide navigation links
+  handleNavDisplay();
+});
+
 // Check if there is a theme preference stored in local storage
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {

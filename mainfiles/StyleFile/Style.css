@@ -40,11 +40,11 @@ a:-webkit-any-link {
 #Light-Dark {
     display: flex;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
     appearance: none;
     border: none;
     background-color: transparent;
-    top: 8%;
+    top: 2%;
     left: 95.5%;
     cursor: pointer;
 
@@ -221,9 +221,9 @@ a:-webkit-any-link {
     list-style: none;
     text-transform: capitalize;
     font-size: 20px;
-    gap: 50px;
-    left: 50%;
-    transform: translate(-51%, 0%);
+    gap: 45px;
+    left: 49%;
+    transform: translate(-53%, 0%);
 }
 
 .nav-links a {
@@ -250,7 +250,7 @@ a:-webkit-any-link {
     color: #d1a1ff;
     border: 2px solid #000000;
     border-radius: 10px;
-    left: 1410px;
+    left: 86%;
     z-index: 2;
 }
 

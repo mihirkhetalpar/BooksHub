@@ -1,5 +1,9 @@
 Click This Link to Visit My Website
+<<<<<<< HEAD
 https://mihirkhetalpar.github.io/BooksHub/
+=======
+[https://mihirkhetalpar.github.io/BooksHub.github.io/](https://mihirkhetalpar.github.io/BooksHub/)
+>>>>>>> 41928c87d3edd88a38b2089dc3688e2690bc475e
 
 # BooksHub
 

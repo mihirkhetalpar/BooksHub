@@ -997,6 +997,13 @@ a:-webkit-any-link {
     font-size: 18px;
 }
 
+.commentSection{
+    display: flex;
+    position: relative;
+    top: 2040px;
+    left: -380px;
+    z-index: 15;
+  }
 
 
 /* STYLE FOR FOOTER */

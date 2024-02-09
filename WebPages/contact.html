@@ -2,74 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet'>
     <title>CONTACT FORM</title>
     <link rel="shortcut icon" href="../Images/Logo.svg" type="image/x-icon"/>
-    <link rel="stylesheet" href="../BooksHub/CSS/Books_Hub.css"/>
+    <link rel="stylesheet" href="../mainfiles/StyleFile/Style.css"/>
 </head>
-<body style="overflow: hidden;">
+<body style="background-color: black;">
 
-     <!-- PRELOADER -->
+  <button onclick="toggleDarkMode()" id="Light-Dark">
+    <img src="../Images/LightTheme.svg" alt="Lightmode" class="light-image">
+    <img src="../Images/DarkTheme.svg" alt="Darkmode" class="dark-image">
+     <div class="switch"></div>
+  </button>
 
-     <div id="preloader">
+<!-- PRELOADER -->
+<div id="preloader"></div>
+
+<div id="contactback">
+<img src="../Images/CONTACTBACKGROUND.svg" id="LightBackImg" alt="HOMEBACKGROUND" style="width: 100%; display: block;">
+<img src="../Images/DARKCONTACTBACKGROUND.svg" id="DarkBackImg" alt="DARKHOMEBACKGROUND" style="width: 100%; display: none;">
+</div>
+
+ <!-- SCROLL INDICATOR -->
+ <div class="scroll-indicator"></div> 
+
+   <!-- NavBar -->
+<nav class="navbar">
+    <div class="logo">
+      <a href="../index.html">
+        <h1 id="mainsitelogo">
+          BooksHub
+        </h1>
+      </a>
     </div>
+    
+    <button class="menu-toggle">
+     <img src="../Images/Toggle.svg" alt="toggleImg">
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../WebPages/books.html" target="_blank">Books</a></li>
+      <li><a href="../WebPages/contact.html">Contact</a></li>
+      <li><a href="../WebPages/about.html" target="_blank">About</a></li>
+      <li><a href="../WebPages/Clubs.html" target="_blank">Club</a></li>
+      <li id="Submit-EB"><a href="https://forms.gle/V8p62WaJdHcXMPWB6" target="_blank" >Submit Book</a></li>
+    </ul>
+    <a href="https://forms.gle/V8p62WaJdHcXMPWB6" target="_blank" class="E-BookSub">Submit Your E-Book</a>
+  </nav>
 
-      <!-- SCROLL INDICATOR -->
-      <div class="scroll-indicator"></div> 
+    <div class="contactglass">                                              
+ <h1 class="contact">Contact Us</h1>
+ <form action="https://formspree.io/f/xrgwwner" method="POST" enctype="multipart/form-data">
 
-      <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-     </div>
-
-      <nav class="navbar">
-        <div class="logo">
-          <a href="../index.html">
-            <img src="../Images/Logo.svg" alt="navlog"/>
-          </a>
-        </div>
-        <button class="menu-toggle">
-        <img src="../Images/Toggle.svg">
-        </button>
-        <ul class="nav-links">
-          <li><a href="../index.html" target="_blank">Home</a></li>
-          <li><a href="../BooksHub-HtmlFiles/books.html" target="_blank">Books</a></li>
-          <li><a href="../BooksHub-HtmlFiles/contact.html">Contact</a></li>
-          <li><a href="../BooksHub-HtmlFiles/about.html" target="_blank">About</a></li>
-          <li><a href="../BooksHub-HtmlFiles/donatetion.html" target="_blank">Donate</a></li>
-          <li><a href="../BooksHub-HtmlFiles/Clubs.html" target="_blank">Club</a></li>
-        </ul>
-        <a href="https://forms.gle/7HaYL5PqKcEMPyv6A" target="_blank" class="E-BookSub">Submit Your E-Book</a>
-      </nav>
-
-    <div class="contactglass"></div>                                               
- <h1 class="contaxt">Contact Us</h1>
- <form   action="https://formspree.io/f/xrgwwner" method="POST" enctype="multipart/form-data">
+     <label style="color: white;" for="fname">First Name*</label>
      <input type="text" id="fname" name="First Name" placeholder="Joy" required><br>
+
+     <label style="color: white;" for="lname">Last Name*</label>
      <input type="text" id="lname" name="Last Name" placeholder="D." required><br>
+
+     <label style="color: white;" for="email">Email*</label>
      <input type="text" id="email" name="Email" placeholder="Example123@gmail.com" required><br>
+
+     <label style="color: white;" for="message">Message*</label>
      <textarea id="message" name="Message" rows="5" cols="50" placeholder="Type Your Message Here..." required></textarea><br>
   
- <select name="Continent" required>
+ <select id="CountrySelect" name="Continent" required>
  <option disabled selected value="">Select Country</option>    
  <option>AUSTRALIA</option>
  <option>BRAZIL</option>
@@ -97,15 +95,16 @@
  <option>ZIMBABWE</option>
  <option>OTHER</option>
  </select>
- <button class="Sub-button" type="submit">Send</button>
+ <button class="Contact-Button" type="submit">Send</button>
  </form>
+</div> 
 
- <footer>
-    <div class="footer-bottom">
-      &copy; 2024 BooksHub.com | Created by Mihir K.
-    </div>
-  </footer>
+<footer>
+  <div class="footer-bottom">
+    <h1>&copy; 2024 BooksHub | Created by Mihir K.</h1>
+  </div>
+</footer>
 
-  <script src="../BooksHub/JS/Books_Hub.js" defer></script>
+  <script src="../mainfiles/ScriptFile/Script.js" defer></script>
 </body>
 </html>

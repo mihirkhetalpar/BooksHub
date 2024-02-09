@@ -123,7 +123,7 @@ button {
 
 #preloader {
     top: 0px;
-    background: black url(../StyleFile/IMG/Books-HubPreLoad.gif) no-repeat center center;
+    background: black url(../StyleFile/IMG/preloader.gif) no-repeat center center;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -132,6 +132,7 @@ button {
 
 @media (max-width: 400px) {
     #preloader {
+        background: black url(../StyleFile/IMG/Books-HubPreLoad.gif) no-repeat center center;
         background-size: 100%;
         top: 50%;
         left: 50%;
@@ -157,6 +158,14 @@ button {
     z-index: -1;
 }
 
+#contactback {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: -1;
+}
+
 @media (max-width: 400px) {
     #homeback {
         top: 0px;
@@ -166,6 +175,13 @@ button {
     #Booksback {
         top: 0px;
         width: 720px;
+    }
+
+    #contactback{
+        top: 0px;
+        left: -80px;
+        height: 585px;
+        width: 579px;
     }
 }
 
@@ -1296,6 +1312,169 @@ button {
      text-align: center;
     }
 }
+
+/* BOOKS PAGE END HERE 👆 */
+
+
+/* CONTACT PAGE START HERE 👇 */
+
+.contactglass{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    height: 500px;
+    width: 400px;
+    transform: translate(-50%, -50%);
+    background: rgb(0 0 0 / 20%);
+    box-shadow: 0 8px 32px 0 rgb(255 255 255 / 37%);
+    backdrop-filter: blur( 2.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.contact{
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -210%);
+    font-size: 3rem;
+    width: max-content;
+}
+
+form{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 80px;
+    width: 400px;
+    height: 435px;
+    background-color: #ffffff10;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#fname::placeholder,
+#lname::placeholder,
+#email::placeholder,
+#message::placeholder {
+    color: var(--Dark-Button-or-Highlight-Color);
+  text-transform: uppercase;
+}
+
+#fname{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: 80%;
+    height: 20px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 5px solid rgb(255, 0, 183);
+    font-family: 'lemon';
+    background-color: #00e5ff1f;
+    box-shadow: 0px 0px 10px, 0px 0px 10px;
+    color: var(--Dark-Button-or-Highlight-Color);
+    text-transform: capitalize;
+}
+
+#lname{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: 80%;
+    height: 20px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 5px solid rgb(255, 0, 183);
+    font-family: 'lemon';
+    background-color: #00e5ff1f;
+    box-shadow: 0px 0px 10px, 0px 0px 10px;
+    color: var(--Dark-Button-or-Highlight-Color);
+    text-transform: capitalize;
+}
+
+#email{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: 80%;
+    height: 20px;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 5px solid rgb(255, 0, 183);
+    font-family: 'lemon';
+    background-color: #00e5ff1f;
+    box-shadow: 0px 0px 10px, 0px 0px 10px;
+    color: var(--Dark-Button-or-Highlight-Color);
+    text-transform: lowercase;
+}
+
+#message{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: 80% !important;
+    height: 100px !important;
+    border-radius: 15px;
+    padding-left: 10px;
+    border: 5px solid rgb(255, 0, 183);
+    resize: none;
+    font-family: 'lemon';
+    background-color: #00e5ff1f;
+    box-shadow: 0px 0px 10px, 0px 0px 10px;
+    color: var(--Dark-Button-or-Highlight-Color);
+    text-transform: capitalize;
+}
+
+#CountrySelect{
+    position: relative;
+    color: var(--Dark-Button-or-Highlight-Color);
+    font-family: 'lemon';
+    background-color: #00e5ff1f;
+    box-shadow: 0px 0px 10px, 0px 0px 10px;
+    text-align: center;
+    width: 40%;
+    border-radius: 15px;
+    left: 35px;
+    text-transform: capitalize;
+}
+
+#CountrySelect::-webkit-scrollbar {
+    width: 0;
+}
+
+.Contact-Button{
+    position: relative;
+    color: var(--Dark-Button-or-Highlight-Color);
+    font-family: 'lemon';
+    background-color: #00e5ff1f;
+    box-shadow: 0px 0px 10px, 0px 0px 10px;
+    text-align: center;
+    width: 30%;
+    border-radius: 15px;
+    left: 216px;
+    top: -18px;
+    text-transform: capitalize;
+}
+
+
+/* CONTACT PAGE END HERE 👆 */
+
+
+/* ABOUT PAGE START HERE 👇 */
+
+
+
+/* ABOUT PAGE END HERE 👆 */
+
+
+/* CLUB PAGE START HERE 👇 */
+
+
+
+/* CLUB PAGE END HERE 👆 */
 
 /* STYLE FOR FOOTER */
 footer {

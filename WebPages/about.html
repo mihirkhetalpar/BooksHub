@@ -4,62 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>About Us</title>
+    <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet'>
     <link rel="shortcut icon" href="../Images/Logo.svg" type="image/x-icon"/>
-    <link rel="stylesheet" href="../BooksHub/CSS/Books_Hub.css"/>
+    <link rel="stylesheet" href="../mainfiles/StyleFile/Style.css"/>
 </head>
 <body>
 
-     <!-- PRELOADER -->
+  <button onclick="toggleDarkMode()" id="Light-Dark">
+    <img src="../Images/LightTheme.svg" alt="Lightmode" class="light-image">
+    <img src="../Images/DarkTheme.svg" alt="Darkmode" class="dark-image">
+     <div class="switch"></div>
+  </button>
 
-     <div id="preloader">
+<!-- PRELOADER -->
+<div id="preloader"></div>
+
+<div id="Aboutback">
+<img src="../Images/ABOUTBACKGROUND.svg" id="LightBackImg" alt="HOMEBACKGROUND" style="width: 100%; display: block;">
+<img src="../Images/DARKABOUTBACKGROUND.svg" id="DarkBackImg" alt="DARKHOMEBACKGROUND" style="width: 100%; display: none;">
+</div>
+
+ <!-- SCROLL INDICATOR -->
+ <div class="scroll-indicator"></div> 
+
+   <!-- NavBar -->
+<nav class="navbar">
+    <div class="logo">
+      <a href="../index.html">
+        <h1 id="mainsitelogo">
+          BooksHub
+        </h1>
+      </a>
     </div>
-
-           <!-- SCROLL INDICATOR -->
-           <div class="scroll-indicator"></div> 
-
-           <div class="background">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-         </div>
-
-          <!-- NavBar -->
-    <nav class="navbar">
-      <div class="logo">
-        <a href="../index.html">
-          <img src="../Images/Logo.svg" alt="navlog"/>
-        </a>
-      </div>
-      <button class="menu-toggle">
-       <img src="../Images/Toggle.svg">
-      </button>
-      <ul class="nav-links">
-        <li><a href="../index.html" target="_blank">Home</a></li>
-        <li><a href="../BooksHub-HtmlFiles/books.html" target="_blank">Books</a></li>
-        <li><a href="../BooksHub-HtmlFiles/contact.html" target="_blank">Contact</a></li>
-        <li><a href="../BooksHub-HtmlFiles/about.html">About</a></li>
-        <li><a href="../BooksHub-HtmlFiles/donatetion.html" target="_blank">Donate</a></li>
-        <li><a href="../BooksHub-HtmlFiles/Clubs.html" target="_blank">Club</a></li>
-      </ul>
-      <a href="https://forms.gle/7HaYL5PqKcEMPyv6A" target="_blank" class="E-BookSub">Submit Your E-Book</a>
-    </nav>
+    
+    <button class="menu-toggle">
+     <img src="../Images/Toggle.svg" alt="toggleImg">
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../WebPages/books.html">Books</a></li>
+      <li><a href="../WebPages/contact.html">Contact</a></li>
+      <li><a href="../WebPages/about.html">About</a></li>
+      <li><a href="../WebPages/Clubs.html">Club</a></li>
+      <li id="Submit-EB"><a href="https://forms.gle/V8p62WaJdHcXMPWB6" target="_blank" >Submit Book</a></li>
+    </ul>
+    <a href="https://forms.gle/V8p62WaJdHcXMPWB6" target="_blank" class="E-BookSub">Submit Your E-Book</a>
+  </nav>
 
        <div id="aboutus"> 
 
@@ -68,26 +58,53 @@
          <p class="insideabotext1">
           Welcome to our project website! We are a team of dedicated students working on our final year project, aiming to showcase our skills and knowledge in web development. Our goal is to create an engaging and informative platform that highlights our expertise in designing and implementing a fully functional website.
 
+          <br><br>
+
           Through our project, we aim to demonstrate our understanding of various web technologies and best practices in user interface design. With a strong focus on creativity and innovation, we are committed to delivering a seamless and user-friendly experience for our visitors.
           
+          <br><br>
+
           Our team consists of passionate individuals who have collaborated to bring this project to life. We have worked tirelessly to ensure that this website reflects our collective effort and proficiency in the field of web development.
           
+          <br><br>
+
           Thank you for visiting our website and taking the time to explore our project. We hope you enjoy navigating through the various features and functionalities that we have incorporated. Your support and feedback are invaluable to us as we continue to refine and improve our work.
          </p>        
         </div> 
 
         <p class="backmission"> Background and Mission </p>
-        <div class="aboutusp2">
-          <p class="insideabotext2">
-            Books Hub was initiated with a strong commitment to revolutionize the way people engage with literature and knowledge. Our mission is to cultivate a vibrant community of book enthusiasts and knowledge seekers, fostering a space where the love for reading and learning is nurtured and shared.
+          <div class="aboutusp2">
+             <p class="insideabotext2">
+               Books Hub emerged from a strong commitment to redefine the way individuals interact with literature and knowledge.
+               Our mission is to cultivate a vibrant community of book enthusiasts and knowledge seekers, establishing a haven
+               where the joy of reading and learning is not only embraced but also shared. 
 
-            Through the integration of modern technologies and an intuitive user interface, we aspire to make the vast universe of literature easily accessible and engaging for readers of all ages and backgrounds. By leveraging the capabilities of tools like VS Code and the hosting support of Firebase or 000webhost, we aim to provide a seamless and enriching experience for our users.
+               <br><br>
 
-           Our ultimate vision is to foster a culture of continuous learning and personal growth, where the transformative power of literature is harnessed to inspire, educate, and empower individuals worldwide. We are committed to upholding the values of inclusivity, diversity, and knowledge-sharing, promoting a global community that thrives on the exploration and appreciation of diverse literary works.
-         </p>
-        </div>
+               Through the seamless integration of cutting-edge technologies and an intuitive user interface, we strive to make the
+               expansive realm of literature easily accessible and captivating for readers of all ages and backgrounds. Utilizing
+               tools like VS Code for our HTML, CSS, and JS coding, our website is hosted on GitHub, providing a dynamic platform
+               for an enriching experience. Our vast collection of books is hosted on Netlify, ensuring a smooth and responsive
+               reading experience.
 
-        <p class="teamember"> Team Members </p>
+               <br><br>
+
+               To enhance user engagement, we've implemented features such as commenting through Utterances, allowing users to
+               share their thoughts and insights on our books. For user interaction and community building, we've incorporated
+               Firebase for our Club Page, where members can engage in real-time conversations, share messages, and express
+               themselves with emojis. Firebase's Realtime Database and Authentication ensure a secure and seamless user
+               experience, including the option to log in using Firebase Google Authentication.
+
+               <br><br>
+
+               Our ultimate vision is to foster a culture of continuous learning and personal growth, leveraging the transformative
+               power of literature to inspire, educate, and empower individuals globally. We are committed to upholding values of
+               inclusivity, diversity, and knowledge-sharing, cultivating a global community that flourishes in the exploration and
+               appreciation of diverse literary works.
+          </p>
+         </div>
+
+        <p class="team-member"> Team Members </p>
         <div class="aboutusp3">
          <p class="insideabotext3">
             Meet the dedicated individuals behind the scenes of Books Hub, each bringing unique expertise and passion to our collective endeavor.
@@ -96,7 +113,7 @@
             <div id="contributor1">
               <div class="box1"></div>
 
-              <div class="card1">
+              <div class="Aboutcard1">
                 <div class="wrapper1">
                 <img src="../Team/MihirK.jpg"  class="cover-image1"/>
                 </div>
@@ -112,12 +129,12 @@
             <div id="contributor2">
               <div class="box2"></div>
 
-              <div class="card2">
+              <div class="Aboutcard2">
                 <div class="wrapper2">
                 <img src="../Team/AmanR.jpeg" class="cover-image2" />
                 </div>
                 <img src="../Team/Group 2.png" class="logo2" />
-                <img src="../Team/AmanR-Png.png" class="character2" />
+                <img src="../Team/AmanR.png" class="character2" />
               </div>
               <div id="typewriter2">
                 <h1> Designer </h1>
@@ -128,7 +145,7 @@
             <div id="contributor3">
               <div class="box3"></div>
 
-              <div class="card3">
+              <div class="Aboutcard3">
                 <div class="wrapper3">
                 <img src="../Team/YashD.jpeg" class="cover-image3" />
                 </div>
@@ -145,10 +162,10 @@
 
        <footer>
         <div class="footer-bottom">
-          &copy; 2024 BooksHub.com | Created by Mihir K.
+         <h1> &copy; 2024 BooksHub | Created by Mihir K.</h1>
         </div>
       </footer>
 
-      <script src="../BooksHub/JS/Books_Hub.js" defer></script>
+      <script src="../mainfiles/ScriptFile/Script.js" defer></script>
 </body>
 </html>

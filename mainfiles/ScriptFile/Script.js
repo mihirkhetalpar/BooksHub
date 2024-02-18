@@ -132,27 +132,12 @@ window.addEventListener("scroll", function () {
 
 
 // INVITE FRIENDS 
-  // Function to copy the website link
-  function copyWebsiteLink() {
-    var websiteLink = "https://mihirkhetalpar.github.io/BooksHub/";
-
-    // Create a temporary input element
-    var tempInput = document.createElement("input");
-    tempInput.value = websiteLink;
-
-    // Append the input element to the document
-    document.body.appendChild(tempInput);
-
-    // Select and copy the text inside the input element
-    tempInput.select();
-    document.execCommand("copy");
-
-    // Remove the temporary input element
-    document.body.removeChild(tempInput);
-
-    // Alert the user that the link has been copied
-    alert("Website link copied!");
-  }
+async function Invite(){
+  await navigator.share({
+   title:document.title,
+   url:window.location.href
+  })
+}
 
   var categories = [
     { name: "Manga", link: "../Books-PagesHtml/Manga.html" },

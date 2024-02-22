@@ -78,7 +78,7 @@ button {
     appearance: none;
     border: none;
     background-color: transparent;
-    top: 2%;
+    top: 1.5%;
     left: 95.5%;
     cursor: pointer;
 
@@ -130,7 +130,8 @@ button {
 
 #preloader {
     top: 0px;
-    background: black url(../StyleFile/IMG/preloader.gif) no-repeat center center;
+    background: black url(../StyleFile/IMG/PreLoader.gif) no-repeat center 25%;
+    background-size: 50%;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -154,6 +155,11 @@ button {
     top: -280px;
     width: 100%;
     z-index: -1;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.dark-mode #homeback{
+  filter: drop-shadow(2px 4px 6px white);
 }
 
 /* BOOKS BACKGROUND */
@@ -163,7 +169,14 @@ button {
     top: -222px;
     width: 100%;
     z-index: -1;
+    filter: drop-shadow(2px 4px 6px black);
 }
+
+.dark-mode #Booksback{
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+/* CONTACT BACKGROUND */
 
 #contactback {
     display: flex;
@@ -171,7 +184,14 @@ button {
     top: 0px;
     width: 100%;
     z-index: -1;
+    filter: drop-shadow(2px 4px 6px black);
 }
+
+.dark-mode #contactback{
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+/* ABOUT BACKGROUND */
 
 #Aboutback {
   display: flex;
@@ -180,6 +200,25 @@ button {
   width: 100%;
   height: 135%;
   z-index: -1;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.dark-mode #Aboutback{
+  filter: drop-shadow(2px 4px 6px white);
+}
+
+/* CLUB BACKGROUND */
+
+#Clubback {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.dark-mode #Clubback{
+  filter: drop-shadow(2px 4px 6px white);
 }
 
 @media (max-width: 400px) {
@@ -474,15 +513,14 @@ button {
     display: flex;
     position: absolute;
     top: 50px;
-    left: 110px;
+    left: 8.9%;
 }
 
 .introbox1 h1 {
-    display: block;
     position: absolute;
     text-align: center;
     width: 200px;
-    left: 200px;
+    left: 14%;
     top: 35px;
     font-size: 1.4rem;
     cursor: pointer;
@@ -490,12 +528,11 @@ button {
 }
 
 .introbox1 p {
-    display: block;
     position: absolute;
     text-align: left;
     width: 200px;
     top: 100px;
-    left: 211px;
+    left: 14.2%;
     font-size: 0.8rem;
     cursor: pointer;
     color: var(--Light-Text-or-Content-Color);
@@ -520,7 +557,7 @@ button {
     display: flex;
     position: absolute;
     top: 50px;
-    left: 630px;
+    left: 820px;
     cursor: pointer;
 }
 
@@ -529,7 +566,7 @@ button {
     position: absolute;
     width: 210px;
     top: 30px;
-    left: 720px;
+    left: 925px;
     text-align: center;
     font-size: 1.4rem;
     cursor: pointer;
@@ -542,7 +579,7 @@ button {
     width: 180px;
     top: 95px;
     text-align: left;
-    left: 743px;
+    left: 935px;
     font-size: 0.8rem;
     cursor: pointer;
 }
@@ -562,7 +599,7 @@ button {
     display: flex;
     position: absolute;
     top: 52px;
-    left: 1135px;
+    left: 1450px;
 }
 
 .introbox3 h1 {
@@ -570,7 +607,7 @@ button {
     position: absolute;
     width: 200px;
     text-align: center;
-    left: 1225px;
+    left: 1540px;
     font-size: 1.2rem;
     top: 35px;
     cursor: pointer;
@@ -583,7 +620,7 @@ button {
     text-align: left;
     width: 190px;
     top: 90px;
-    left: 1250px;
+    left: 1560px;
     font-size: 0.8rem;
     cursor: pointer;
     color: var(--Light-Text-or-Content-Color);
@@ -1094,22 +1131,22 @@ button {
 }
 
 #BookHead {
-    display: flex;
-    position: absolute;
-    cursor: default;
-    margin: 0px;
-    padding: 0px;
-    top: 42%;
-    width: 100%;
-    -webkit-text-stroke: 1px #281048;
-    color: var(--Common-Text-Color);
-    font-size: 110px;
-    font-weight: 900;
-    font-style: italic;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    user-select: none;
+  display: flex;
+  position: absolute;
+  cursor: default;
+  margin: 0px;
+  padding: 0px;
+  top: 35%;
+  width: 100%;
+  -webkit-text-stroke: 1px #281048;
+  color: var(--Common-Text-Color);
+  font-size: 12rem;
+  font-weight: 900;
+  font-style: italic;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
 }
 
 .dark-mode #BookHead {
@@ -1124,15 +1161,15 @@ button {
 }
 
 #maincategory {
-    display: grid;
-    position: absolute;
-    grid-template-columns: repeat(4, 1fr);
-    height: 0px;
-    width: 0px;
-    top: 70%;
-    left: 60px;
-    row-gap: 150px;
-    column-gap: 95px;
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(4, 1fr);
+  height: 0px;
+  width: 0px;
+  top: 70%;
+  left: 60px;
+  row-gap: 150px;
+  column-gap: 235px;
 }
 
 @media (max-width: 400px) {
@@ -1290,10 +1327,10 @@ button {
 }
 
 .commentSection {
-    display: flex;
-    position: relative;
-    width: 50%;
-    top: 255%;
+  position: absolute;
+  width: 50%;
+  top: 220%;
+  left: -90px;
 }
 
 @media (max-width: 400px) {
@@ -1304,17 +1341,17 @@ button {
 }
 
 .usercontri {
-    display: block;
-    position: absolute;
-    top: 310%;
-    width: fit-content;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 20px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    background-color: #005dff1f;
-    box-shadow: 5px 5px 10px, -5px -5px 10px;
+  display: block;
+  position: absolute;
+  top: 260%;
+  width: fit-content;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: #005dff1f;
+  box-shadow: 5px 5px 10px, -5px -5px 10px;
 }
 
 .usercontri h1 {
@@ -1365,7 +1402,7 @@ button {
     width: max-content;
 }
 
-form{
+#ContactForm{
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -1498,7 +1535,7 @@ form{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
  }
 
-form {
+ #ContactForm {
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -1509,8 +1546,6 @@ form {
   border-radius: 10px;
   overflow: hidden;
  }
-
-
 }
 
 /* CONTACT PAGE END HERE 👆 */
@@ -1533,7 +1568,7 @@ form {
     -webkit-text-stroke: 2px rgb(33 7 69);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
     top: 50px;
-    left: 490px;
+    left: 670px;
     padding: 0px;
     margin: 0px;
     width: max-content;
@@ -1600,10 +1635,10 @@ form {
   .backmission {
     display: flex;
     position: absolute;
-    top: 1015px;
+    top: 960px;
     font-weight: 900;
     font-size: 100px;
-    left: 95px;
+    left: 222px;
     padding: 0px;
     margin: 0px;
     color: var(--Common-Text-Color);
@@ -1674,15 +1709,15 @@ form {
   }
   
   .team-member {
-    display: flex;
+    display: block;
     position: absolute;
-    top: 2340px;
+    top: 2175px;
     font-size: 90px;
     font-weight: 900;
     color: var(--Common-Text-Color);
     -webkit-text-stroke: 5px rgb(33 7 69);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
-    left: 420px;
+    left: 490px;
     width: max-content;
   }
 
@@ -1695,8 +1730,8 @@ form {
     position: absolute;
     font-style: italic;
     font-weight: 900;
-    height: 215vh;
-    top: 2450px;
+    height: 165vh;
+    top: 2310px;
     width: 100vw;
   }
 
@@ -1767,13 +1802,14 @@ form {
     border: 5px solid red;
     border-radius: 200px;
     background: url(../StyleFile/IMG/Polygon\ Luminary.svg);
+    left: 175px;
   }
   
   #typewriter1 {
     display: flex;
     position: absolute;
     top: 0px;
-    left: 300px;
+    left: 430px;
     width: 460px;
   }
   
@@ -1803,7 +1839,7 @@ form {
     display: flex;
     position: absolute;
     top: 0px;
-    left: 300px;
+    left: 460px;
     width: 275px;
   }
   
@@ -1852,7 +1888,7 @@ form {
     border-right: 5px solid var(--Common-Text-Color);
     animation: typewriter 5s steps(100) infinite alternate;
     top: 15px;
-    left: 50px;
+    left: 370px;
     background-color: #005dff1f;
     box-shadow: 2px 2px 10px, -2px -2px 10px;
   }
@@ -1962,10 +1998,10 @@ form {
   
   .contritext1{
     position: absolute;
-    top: 85px;
-    width: 600px;
-    left: 340px;
-    font-size: 34px;
+    top: 90px;
+    width: 825px;
+    left: 355px;
+    font-size: 32px;
     font-weight: 900;
     color: var(--Light-Text-or-Content-Color);
   }
@@ -2120,7 +2156,7 @@ form {
     height: 360px;
     width: 1000px;
     top: 32px;
-    left: 30px;
+    left: 130px;
     border: 5px solid red;
     border-radius: 200px;
     background: url(../StyleFile/IMG/Icon\ Grid.svg);
@@ -2163,9 +2199,9 @@ form {
   
   .contritext2 {
     position: absolute;
-    top: 85px;
-    width: 610px;
-    left: 400px;
+    top: 100px;
+    width: 710px;
+    left: 360px;
     font-size: 30px;
     font-weight: 900;
     color: var(--Light-Text-or-Content-Color);
@@ -2207,7 +2243,7 @@ form {
     cursor: pointer;
     border-radius: 30px;
     top: 100px;
-    left: 70px;
+    left: 30px;
   }
   
   .cover-image2 {
@@ -2323,6 +2359,7 @@ form {
     height: 360px;
     width: 1000px;
     top: 32px;
+    left: 380px;
     border: 5px solid red;
     border-radius: 200px;
     background: url(../StyleFile/IMG/Contour\ Line.svg);
@@ -2364,10 +2401,10 @@ form {
   
   .contritext3 {
     position: absolute;
-    top: 90px;
-    width: 610px;
-    left: 355px;
-    font-size: 33px;
+    top: 100px;
+    width: 740px;
+    left: 585px;
+    font-size: 34px;
     font-weight: 900;
     color: var(--Light-Text-or-Content-Color);
   }
@@ -2408,7 +2445,7 @@ form {
     cursor: pointer;
     border-radius: 30px;
     top: 100px;
-    left: 35px;
+    left: 255px;
   }
   
   .cover-image3 {
@@ -2518,9 +2555,267 @@ form {
 
 /* CLUB PAGE START HERE 👇 */
 
+#googleSignInButton {
+  position: relative;
+  float: right;
+  top: 65px;
+  right: 5px;
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  font-family: 'lemon';
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  gap: 0.75rem;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0, 0.87, 0.12, 1);
+}
 
+#googleSignInButton img {
+  height: 24px;
+  width: auto;
+}
+
+#messageInput {
+  display: flex;
+  position: fixed;
+  top: 94%;
+  height: 30px;
+  left: 2px;
+  width: 94%;
+  font-size: 1rem;
+  color: #5E96FF;
+  background-color: #000000;
+  border-color: blue;
+  text-transform: capitalize;
+  font-family: 'lemon';
+}
+
+#messageInput::placeholder {
+  font-family: 'lemon';
+  text-transform: capitalize;
+  color: #5E96FF;
+}
+
+#sendButton {
+  position: absolute;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  left: 97.2%;
+}
+
+#sendButton img{
+  position: absolute;
+  height: 35px;
+  top: 3px;
+}
+
+#chat {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  padding: 0px;
+  margin: 0px;
+  width: 100vw;
+  height: 95vh;
+  overflow-y: scroll;
+}
+
+#chat::-webkit-scrollbar {
+  width: 0px;
+}
+
+#chat {
+  display: flex;
+  flex-direction: column;
+  top: 105px;
+  height: 80vh;
+  width: 98.7vw;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+#messageForm{
+  display: block;
+  position: absolute;
+  top: 93%;
+  height: 40px;
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.dark-mode #messageForm{
+ background-color: white;
+}
+
+#messageForm #messageInput{
+  position: absolute;
+  top: 4px;
+  height: 30px;
+  left: 0px;
+  width: 90.5%;
+  font-family: 'lemon';
+  font-size: 1rem;
+  color: #5E96FF;
+  text-transform: capitalize;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+#chat a {
+  display: flex;
+  color: #ff0059;
+  max-width: 500px;
+  font-family: 'lemon';
+  font-weight: 100;
+  background-color: transparent;
+}
+
+.message-container {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: max-content;
+  font-family: 'lemon';
+  text-transform: capitalize;
+  font-weight: 600;
+  font-style: italic;
+  padding: 10px;
+}
+
+.user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-right: 5px;
+  color: blue;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container p {
+  margin: 0;
+}
+
+.right-message {
+  background-color: #99edff !important;
+  margin-left: auto;
+}
+
+.left-message {
+  background-color: #d6abff !important;
+  overflow-x: clip;
+}
+
+#emoji {
+  position: absolute;
+  appearance: none;
+  text-rendering: unset;
+  border: none;
+  background-color: transparent;
+  top: -2px;
+  left: 95%;
+  font-size: 30px;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+#emoji:hover {
+  filter: grayscale(0%);
+}
+
+#logoutButton{
+  position: absolute;
+  top: 65px;
+  left: 94%;
+  height: 40px;
+  width: 100px;
+  background-color: red;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'lemon';
+  border: none;
+}
 
 /* CLUB PAGE END HERE 👆 */
+
+/* Error PAGE START HERE 👇 */
+
+.message-timestamp{
+  position: relative;
+  top: 5px;
+  color: red;
+  opacity: 0.5;
+  user-select: none;
+}
+
+/* CLUB PAGE END HERE 👆 */
+
+/* Error PAGE START HERE 👇 */
+
+#errorgif{
+ display: block;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+#E404{
+  display: block;
+  position: absolute;
+  margin: 0px;
+  z-index: 1;
+  font-size: 10rem;
+  left: 30%;
+  color: var(--Dark-Button-or-Highlight-Color);
+}
+
+#Error-Button{
+  display: block;
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+}
+
+#Error-Button a{
+  position: absolute;
+  border: 4px solid #419dff;
+  width: 260px;
+  border-radius: 50px;
+  left: 43%;
+  background-color: black;
+  color: #419dff;
+}
+
+
+
+/* Error PAGE END HERE 👆 */
 
 /* STYLE FOR FOOTER */
 footer {

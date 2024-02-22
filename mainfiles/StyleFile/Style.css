@@ -2759,6 +2759,7 @@ button {
   font-size: 1.2rem;
   font-family: 'lemon';
   border: none;
+  cursor: pointer;
 }
 
 /* CLUB PAGE END HERE 👆 */

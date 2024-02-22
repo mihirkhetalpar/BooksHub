@@ -130,7 +130,7 @@ button {
 
 #preloader {
     top: 0px;
-    background: black url(../StyleFile/IMG/PreLoader.gif) no-repeat center 25%;
+    background: black url(../StyleFile/IMG/preloader.gif) no-repeat center 25%;
     background-size: 50%;
     height: 100%;
     width: 100%;

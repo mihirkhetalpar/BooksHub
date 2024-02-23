@@ -243,6 +243,13 @@ button {
       top: -145px;
       width: 720px;
   }
+
+  #Clubback {
+    top: 0px;
+    position: fixed;
+    width: 700px;
+    height: 100%;
+}
 }
 
 /* Scroll indicator styles */
@@ -1337,6 +1344,7 @@ button {
     .commentSection {
      width: 100%;
      top: 925%;
+     left: 0px;
     }
 }
 
@@ -1516,6 +1524,7 @@ button {
     left: 216px;
     top: -18px;
     text-transform: capitalize;
+    border: none;
 }
 
 @media (max-width: 400px) {
@@ -1737,7 +1746,7 @@ button {
 
   @media (max-width: 400px) {
     .aboutusp3{
-     height: 100px;
+     height: 4200px;
      width: max-content;
     }
   }
@@ -1762,7 +1771,7 @@ button {
     .team-member {
       display: flex;
       position: absolute;
-      top: 3280px;
+      top: 3550px;
       font-size: 50px;
       font-weight: 900;
       color: #d0a2ff;
@@ -1803,6 +1812,7 @@ button {
     border-radius: 200px;
     background: url(../StyleFile/IMG/Polygon\ Luminary.svg);
     left: 175px;
+    filter: brightness(0.8);
   }
   
   #typewriter1 {
@@ -1910,7 +1920,7 @@ button {
       position: absolute;
       height: 700px;
       width: 350px;
-      top: -520px;
+      top: -200px;
       left: 7px;
       border: none;
       border-radius: 200px;
@@ -1918,11 +1928,24 @@ button {
       background-color: #00000014;
       box-shadow: 2px 2px 10px, -2px -2px 10px;
     }
+
+    .box1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../StyleFile/IMG/Polygon\ Luminary.svg) no-repeat 100%;
+    background-size: cover;
+    border-radius: 200px;
+    filter: brightness(0.5);
+  }
     
     #typewriter1 {
       display: flex;
       position: absolute;
-      top: 350px;
+      top: 550px;
       left: 55px;
       width: max-content;
     }
@@ -1943,7 +1966,7 @@ button {
     #typewriter2 {
       display: flex;
       position: absolute;
-      top: 360px;
+      top: 610px;
       left: 115px;
       width: max-content;
     }
@@ -1968,7 +1991,7 @@ button {
       left: 40px;
       width: max-content;
       bottom: 0px;
-      top: 0px;
+      top: 320px;
     }
     
     #typewriter3 h1 {
@@ -2013,16 +2036,16 @@ button {
   @media (max-width:400px) {
     .contritext1 {
       position: absolute;
-      top: -160px;
+      top: 60px;
       width: 320px;
       left: 5px;
       padding: 20px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 900;
     } 
 
     .Aboutcard1 {
-      top: -450px !important;
+      top: -250px !important;
       left: 35px;
     }
 
@@ -2160,6 +2183,7 @@ button {
     border: 5px solid red;
     border-radius: 200px;
     background: url(../StyleFile/IMG/Icon\ Grid.svg);
+    filter: brightness(0.8);
   }
   
   @media (max-width:400px) {
@@ -2174,12 +2198,25 @@ button {
       position: absolute;
       height: 750px;
       width: 350px;
-      top: -600px;
+      top: -220px;
       left: 7px;
       border: none;
       background: none;
       background-color: #00000014;
       box-shadow: 2px 2px 10px, -2px -2px 10px;
+    }
+
+    .box2::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url(../StyleFile/IMG/Icon\ Grid.svg) no-repeat 100%;
+      background-size: cover;
+      border-radius: 200px;
+      filter: brightness(0.5);
     }
   }
   
@@ -2214,18 +2251,18 @@ button {
   @media (max-width:400px) {
     .contritext2 {
       position: absolute;
-      top: -230px;
+      top: 30px;
       width: 320px;
       left: 20px;
       padding: 15px;
-      font-size: 20px;
+      font-size: 23px;
       font-weight: 900;
       -webkit-text-stroke: 1px rgb(33 7 69);
       filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
     }
 
     .Aboutcard2 {
-      top: -520px !important;
+      top: -280px !important;
       left: 40px !important;
     }
 
@@ -2363,6 +2400,7 @@ button {
     border: 5px solid red;
     border-radius: 200px;
     background: url(../StyleFile/IMG/Contour\ Line.svg);
+    filter: brightness(0.8);
   }
   
   @media (max-width:400px) {
@@ -2378,12 +2416,25 @@ button {
       position: absolute;
       height: 800px;
       width: 350px;
-      top: -800px;
+      top: -350px;
       left: -220px;
       background: none;
       border: none;
       background-color: #00000014;
       box-shadow: 2px 2px 10px, -2px -2px 10px;
+    }
+
+    .box3::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url(../StyleFile/IMG/Contour\ Line.svg) no-repeat 100%;
+      background-size: cover;
+      border-radius: 200px;
+      filter: brightness(0.5);
     }
   }
   
@@ -2416,18 +2467,18 @@ button {
   @media (max-width:400px) {
     .contritext3 {
       position: absolute;
-      top: -445px;
+      top: -120px;
       width: 300px;
       left: -200px;
       padding: 20px;
-      font-size: 25px;
+      font-size: 28px;
       font-weight: 900;
       -webkit-text-stroke: 1px rgb(33 7 69);
       filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
     }
 
     .Aboutcard3 {
-      top: -730px !important;
+      top: -410px !important;
       left: -190px !important;
     }
 
@@ -2664,7 +2715,7 @@ button {
   position: absolute;
   top: 4px;
   height: 30px;
-  left: 0px;
+  left: 15px;
   width: 90.5%;
   font-family: 'lemon';
   font-size: 1rem;
@@ -2749,7 +2800,7 @@ button {
 
 #logoutButton{
   position: absolute;
-  top: 65px;
+  top: 62px;
   left: 94%;
   height: 40px;
   width: 100px;
@@ -2762,16 +2813,88 @@ button {
   cursor: pointer;
 }
 
-/* CLUB PAGE END HERE 👆 */
-
-/* Error PAGE START HERE 👇 */
-
 .message-timestamp{
   position: relative;
   top: 5px;
   color: red;
   opacity: 0.5;
   user-select: none;
+}
+
+emoji-picker{
+  position: fixed;
+  height: 300px;
+  top: 61.8%;
+  left: 83.5%;
+}
+
+
+@media (max-width:400px) {
+ #emoji{
+  display: none;
+ }
+
+ #chat{
+  height: 65vh;
+ }
+
+ #chat a {
+  max-width: 200px;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+ #messageForm{
+  top: 90%;
+  width: 85%;
+ }
+
+ #messageForm #messageInput{
+  width: 80%;
+  font-size: 0.7rem;
+ }
+
+ #sendButton{
+ left: 100%;
+ }
+
+ #logoutButton{
+  left: 74%;
+ }
+
+ .message-content{
+  max-width: 200px;
+ }
+
+ .message-container p{
+  max-width: 120px;
+  text-align: left;
+  font-size: 0.8rem;
+ }
+
+ .right-message{
+  max-width: 200px !important;
+  margin-right: 10px;
+  word-wrap: break-word;
+  align-items: self-start;
+  text-align: left;
+ }
+
+ .left-message{
+  max-width: 200px !important;
+  margin-left: -5px;
+ }
+
+ .message-timestamp{
+  max-width: 200px;
+  font-size: 0.8rem;
+  text-align: end;
+ }
+
+ emoji-picker{
+  display: none;
+ }
 }
 
 /* CLUB PAGE END HERE 👆 */
@@ -2813,8 +2936,6 @@ button {
   background-color: black;
   color: #419dff;
 }
-
-
 
 /* Error PAGE END HERE 👆 */
 

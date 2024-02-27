@@ -8,7 +8,7 @@ on:
 
   push:
     branches:
-      - master
+      - main  # Adjusted to use 'main' instead of 'master'
 
 jobs:
   generate:
@@ -27,12 +27,14 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: dist/snake.svg?palette=github-dark
+          outputs: snake.svg?palette=github-dark  # Adjusted path to store in the main branch
 
-      - name: push snake.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v4.0.0  # Use the latest version that supports Node.js 14 or higher
-        with:
-          target_branch: output
-          build_dir: dist
+      - name: Commit and push changes
+        run: |
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+          git add .
+          git commit -m "Update snake.svg"
+          git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

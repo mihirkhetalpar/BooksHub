@@ -150,7 +150,7 @@ async function Invite(){
     { name: "Fantasy", link: "../Books-PagesHtml/Fantasy.html" },
     { name: "Mystery", link: "../Books-PagesHtml/Mystery.html" },
     { name: "Action&Adventure", link: "../Books-PagesHtml/ActionAdventure.html" },
-    { name: "Thriller", link: "../Books-PagesHtml/THRILLER.html" },
+    { name: "Thriller", link: "../Books-PagesHtml/Thriller.html" },
     { name: "History", link: "../Books-PagesHtml/History.html" },
   ];
   

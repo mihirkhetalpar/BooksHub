@@ -426,24 +426,25 @@ button {
     }
 
     .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        top: 57px;
-        left: 335px;
-        height: max-content;
-        width: 30%;
-        padding: 0;
-        margin: 0;
-        gap: 10px;
-        background: rgba(232, 131, 255, 0.3);
-        box-shadow: 0 8px 32px 0 rgba(128, 0, 255, 0.37);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-radius: 10px;
-        border-left: 2px solid rgba(255, 255, 255, 0.18);
-        border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      top: 57px;
+      left: 335px;
+      height: max-content;
+      width: 30%;
+      padding: 0;
+      margin: 0;
+      gap: 10px;
+      background: rgb(255, 255, 255);
+      border-radius: 10px;
+      border-left: 2px solid rgba(255, 255, 255, 0.18);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .dark-mode .nav-links{
+      background: rgb(0 0 0);
     }
 
     .nav-links li {
@@ -1344,7 +1345,7 @@ button {
 @media (max-width: 400px) {
     .commentSection {
      width: 100%;
-     top: 925%;
+     top: 1020%;
      left: 0px;
     }
 }
@@ -1371,7 +1372,7 @@ button {
 
 @media (max-width: 400px) {
     .usercontri{
-     top: 985%;
+     top: 930%;
     }
 
     .usercontri h1{

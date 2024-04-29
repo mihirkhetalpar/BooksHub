@@ -83,18 +83,18 @@ function moveSwitch(immediate = false) {
 }
 
 // Function to update the background image based on the theme
-function updateBackgroundImage(theme) {
-  const lightBackImg = document.getElementById('LightBackImg');
-  const darkBackImg = document.getElementById('DarkBackImg');
+// function updateBackgroundImage(theme) {
+//   const lightBackImg = document.getElementById('LightBackImg');
+//   const darkBackImg = document.getElementById('DarkBackImg');
 
-  if (theme === 'dark-mode') {
-    lightBackImg.style.display = 'none';
-    darkBackImg.style.display = 'block';
-  } else {
-    lightBackImg.style.display = 'block';
-    darkBackImg.style.display = 'none';
-  }
-}
+//   if (theme === 'dark-mode') {
+//     lightBackImg.style.display = 'none';
+//     darkBackImg.style.display = 'block';
+//   } else {
+//     lightBackImg.style.display = 'block';
+//     darkBackImg.style.display = 'none';
+//   }
+// }
 
 // Function to trigger the storage event
 function triggerStorageEvent() {
@@ -139,51 +139,51 @@ async function Invite(){
   })
 }
 
-  var categories = [
-    { name: "Manga", link: "../Books-PagesHtml/Manga.html" },
-    { name: "Comic", link: "../Books-PagesHtml/Comics.html" },
-    { name: "Kid Stories", link: "../Books-PagesHtml/KidStories.html" },
-    { name: "Poem", link: "../Books-PagesHtml/Poetry.html" },
-    { name: "Coding", link: "../Books-PagesHtml/coding.html" },
-    { name: "Science", link: "../Books-PagesHtml/Science.html" },
-    { name: "Romance", link: "../Books-PagesHtml/Romance.html" },
-    { name: "Fantasy", link: "../Books-PagesHtml/Fantasy.html" },
-    { name: "Mystery", link: "../Books-PagesHtml/Mystery.html" },
-    { name: "Action&Adventure", link: "../Books-PagesHtml/ActionAdventure.html" },
-    { name: "Thriller", link: "../Books-PagesHtml/Thriller.html" },
-    { name: "History", link: "../Books-PagesHtml/History.html" },
-  ];
+  // var categories = [
+  //   { name: "Manga", link: "../Books-PagesHtml/Manga.html" },
+  //   { name: "Comic", link: "../Books-PagesHtml/Comics.html" },
+  //   { name: "Kid Stories", link: "../Books-PagesHtml/KidStories.html" },
+  //   { name: "Poem", link: "../Books-PagesHtml/Poetry.html" },
+  //   { name: "Coding", link: "../Books-PagesHtml/coding.html" },
+  //   { name: "Science", link: "../Books-PagesHtml/Science.html" },
+  //   { name: "Romance", link: "../Books-PagesHtml/Romance.html" },
+  //   { name: "Fantasy", link: "../Books-PagesHtml/Fantasy.html" },
+  //   { name: "Mystery", link: "../Books-PagesHtml/Mystery.html" },
+  //   { name: "Action&Adventure", link: "../Books-PagesHtml/ActionAdventure.html" },
+  //   { name: "Thriller", link: "../Books-PagesHtml/Thriller.html" },
+  //   { name: "History", link: "../Books-PagesHtml/History.html" },
+  // ];
   
-  function handleSearchInput() {
-    var userInput = document.getElementById('searchInput').value.toLowerCase();
-    var categoryListContainer = document.getElementById('categoryList');
+  // function handleSearchInput() {
+  //   var userInput = document.getElementById('searchInput').value.toLowerCase();
+  //   var categoryListContainer = document.getElementById('categoryList');
   
-    if (userInput.trim() === '') {
-      // If the search input is empty, hide the suggestions
-      categoryListContainer.innerHTML = '';
-      return;
-    }
+  //   if (userInput.trim() === '') {
+  //     // If the search input is empty, hide the suggestions
+  //     categoryListContainer.innerHTML = '';
+  //     return;
+  //   }
   
-    var matchingCategories = categories.filter(function(category) {
-      return category.name.toLowerCase().includes(userInput);
-    });
+  //   var matchingCategories = categories.filter(function(category) {
+  //     return category.name.toLowerCase().includes(userInput);
+  //   });
   
-    // Display matching suggestions
-    categoryListContainer.innerHTML = '';
-    matchingCategories.forEach(function(category) {
-      var suggestion = document.createElement('div');
-      suggestion.classList.add('Suggestion-Div'); 
+  //   // Display matching suggestions
+  //   categoryListContainer.innerHTML = '';
+  //   matchingCategories.forEach(function(category) {
+  //     var suggestion = document.createElement('div');
+  //     suggestion.classList.add('Suggestion-Div'); 
   
-      var link = document.createElement('a');
-      link.href = category.link;
-      link.target = '_blank';
-      link.textContent = category.name;
-      link.classList.add('Suggestion-Links'); 
+  //     var link = document.createElement('a');
+  //     link.href = category.link;
+  //     link.target = '_blank';
+  //     link.textContent = category.name;
+  //     link.classList.add('Suggestion-Links'); 
   
-      suggestion.appendChild(link);
-      categoryListContainer.appendChild(suggestion);
-    });
-  }
+  //     suggestion.appendChild(link);
+  //     categoryListContainer.appendChild(suggestion);
+  //   });
+  // }
   
   
 

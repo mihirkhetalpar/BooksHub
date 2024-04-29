@@ -4,7 +4,7 @@ body {
     height: 100lvh;
     width: 100lvw;
     overflow-x: hidden;
-    font-family: 'lemon';
+    font-family: monospace;
     background-color: var(--Light-Primary-Color);
     color: var(--Light-Text-or-Content-Color);
     transition: background-color 0.5s, color 0.5s;
@@ -58,10 +58,10 @@ button {
 
 :root {
     /* LIGHTMODE */
-    --Light-Primary-Color: #ffffff;
+    --Light-Primary-Color: #e1e1e1;
     --Light-Text-or-Content-Color: #000000;
     --Light-Button-or-Highlight-Color: #FFA500;
-    --Common-Text-Color: #5E96FF;
+    --Common-Text-Color: #00c0e9;
     --Light-Link-Color: #FF4500;
 
     /* DARKMODE */
@@ -308,7 +308,7 @@ button {
     left: 0;
     height: 25px;
     width: 100%;
-    background: rgba(232, 131, 255, 0.3);
+    background: rgb(212 143 255 / 30%);
     box-shadow: 0 8px 32px 0 rgba(128, 0, 255, 0.37);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -320,6 +320,7 @@ button {
 #mainsitelogo {
     text-align: center;
     text-decoration: none;
+    font-family: 'lemon';
     font-size: 2rem;
     font-style: normal;
     font-weight: 400;
@@ -370,7 +371,6 @@ button {
 .nav-links a {
     position: relative;
     text-decoration: none;
-    -webkit-text-stroke: 1px rgb(31 0 63);
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: 0.5px;
@@ -491,7 +491,7 @@ button {
     display: grid;
     position: absolute;
     top: 110px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     height: 200px;
     width: 100%;
@@ -503,13 +503,15 @@ button {
 }
 
 .introbox1 {
+    position: relative;
     width: 300px;
     height: 120px;
     border-radius: 10px;
     margin: auto;
     border: 3px solid black;
     cursor: pointer;
-    background-color: #005dff1f;
+    background-color: #ffffff9c;
+    overflow: hidden;
     box-shadow: 0px 5px 5px, 0px 0px 5px;
 }
 
@@ -518,30 +520,28 @@ button {
 }
 
 .introbox1 img {
-    display: flex;
     position: absolute;
-    top: 50px;
-    left: 8.9%;
+    top: 5px;
+    left: 0%;
 }
 
 .introbox1 h1 {
     position: absolute;
     text-align: center;
     width: 200px;
-    left: 14%;
-    top: 35px;
-    font-size: 1.4rem;
+    left: 30%;
+    top: -10px;
+    font-size: 1.5rem;
     cursor: pointer;
-    -webkit-text-stroke: 0.5px black;
 }
 
 .introbox1 p {
     position: absolute;
     text-align: left;
-    width: 200px;
-    top: 100px;
-    left: 14.2%;
-    font-size: 0.8rem;
+    width: 195px;
+    top: 50px;
+    left: 35%;
+    font-size: 1rem;
     cursor: pointer;
     color: var(--Light-Text-or-Content-Color);
 }
@@ -551,44 +551,43 @@ button {
 }
 
 .introbox2 {
+    position: relative;
     width: 300px;
     height: 120px;
     border-radius: 10px;
     margin: auto;
     border: 3px solid black;
     cursor: pointer;
-    background-color: #005dff1f;
+    background-color: #ffffff9c;
+    overflow: hidden;
     box-shadow: 0px 5px 5px, 0px 0px 5px;
 }
 
 .introbox2 img {
-    display: flex;
     position: absolute;
-    top: 50px;
-    left: 820px;
+    top: 5px;
+    left: 5px;
     cursor: pointer;
 }
 
 .introbox2 h1 {
-    display: block;
-    position: absolute;
-    width: 210px;
-    top: 30px;
-    left: 925px;
-    text-align: center;
-    font-size: 1.4rem;
-    cursor: pointer;
-    -webkit-text-stroke: 0.5px black;
+  position: absolute;
+  width: 190px;
+  top: -10px;
+  left: 100px;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .introbox2 p {
     display: block;
     position: absolute;
     width: 180px;
-    top: 95px;
+    top: 50px;
     text-align: left;
-    left: 935px;
-    font-size: 0.8rem;
+    left: 115px;
+    font-size: 0.9rem;
     cursor: pointer;
 }
 
@@ -1034,7 +1033,7 @@ button {
     border: 3px solid black;
     margin: auto;
     cursor: pointer;
-    background-color: #005dff1f;
+    background-color: #ffffff9c;
     box-shadow: 0px 5px 5px, 0px 0px 5px;
 }
 
@@ -1061,6 +1060,7 @@ button {
     position: absolute;
     left: 45%;
     width: 165px;
+    font-size: 1rem;
 }
 
 .svgbox img:nth-child(2) {
@@ -1092,7 +1092,7 @@ button {
     border-radius: 10px;
     border: 3px solid black;
     margin: auto;
-    background-color: #005dff1f;
+    background-color: #ffffff9c;
     box-shadow: 0px 5px 5px, 0px 0px 5px;
 }
 
@@ -1102,12 +1102,12 @@ button {
 }
 
 .card2 p {
-    position: absolute;
-    top: -5px;
-    left: 45%;
-    width: 150px;
-    font-size: 0.98rem;
-    color: var(--Light-Text-or-Content-Color);
+  position: absolute;
+  top: 0px;
+  left: 45%;
+  width: 150px;
+  font-size: 1rem;
+  color: var(--Light-Text-or-Content-Color);
 }
 
 .dark-mode .card2 p {
@@ -1199,10 +1199,12 @@ button {
 }
 
 #maincategory h1 {
-    display: block;
-    position: relative;
-    top: -150px;
-    rotate: -3deg;
+  display: block;
+  position: relative;
+  top: -150px;
+  rotate: -3deg;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .category-container {
@@ -1338,7 +1340,7 @@ button {
 .commentSection {
   position: absolute;
   width: 50%;
-  top: 240%;
+  top: 220%;
   left: -90px;
 }
 
@@ -2773,12 +2775,12 @@ button {
 }
 
 .right-message {
-  background-color: #99edff !important;
+  background-color: #00c0e9 !important;
   margin-left: auto;
 }
 
 .left-message {
-  background-color: #d6abff !important;
+  background-color: #ff9b9b !important;
   overflow-x: clip;
 }
 

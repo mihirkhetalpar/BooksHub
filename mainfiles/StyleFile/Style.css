@@ -1519,6 +1519,7 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 0.9rem;
+  resize: none;
 }
 
 select {
@@ -1526,10 +1527,6 @@ select {
   /* background-size: 12px;
   padding-right: 30px; */
   color: black;
-}
-
-.dark-mode select{
-  color: white;
 }
 
 .Contact-Button {

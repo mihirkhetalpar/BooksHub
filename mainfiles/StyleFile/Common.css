@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(5, 1fr);
   top: 50px;
   width: 0px;
-  column-gap: 180px;
+  column-gap: 70px;
   row-gap: 150px;
 }
 
@@ -102,7 +102,7 @@ body::-webkit-scrollbar {
   top: 50px;
   left: 25px;
   width: 0px;
-  column-gap: 170px;
+  column-gap: 60px;
 }
 
 .book-gridcommon10{
@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
   top: 50px;
   left: 25px;
   width: 0px;
-  column-gap: 170px;
+  column-gap: 60px;
   row-gap: 170px;
 }
 
@@ -461,8 +461,8 @@ body::-webkit-scrollbar {
 .commentSection20{
   display: block;
   position: absolute;
-  top: 220%;
-  left: -580px;
+  top: 260%;
+  left: -355px;
   width: 100%;
 }
 
@@ -525,16 +525,16 @@ body::-webkit-scrollbar {
 .commentSection10{
   display: block;
   position: absolute;
-  top: 125%;
-  left: -580px;
+  top: 130%;
+  left: -350px;
   width: 100%;
 }
 
 .commentSection5{
   display: block;
   position: absolute;
-  top: 80%;
-  left: -575px;
+  top: 65%;
+  left: -355px;
   width: 100%;
 }
 

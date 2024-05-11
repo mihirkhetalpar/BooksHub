@@ -12,130 +12,6 @@
       </head>
 <body>
 
-   <!-- Pop-up Container for Signup and Login Form -->
-<!--<div id="popup-container" class="popup-container">
-  <div class="popup-content">
-      <h2>Sign Up and Login</h2>
-      <!-- Include the auth.html file here -->
-      <object type="text/html" data="../BooksHub/User-Auth/auth.html" style="width:100%; height:100%;"></object>
-  </div>
-</div> -->
-
-  <!-- JavaScript Code for Pop-up Functionality -->
-  <script>
-    
-document.addEventListener("DOMContentLoaded", function() {
-    // Check if the user has already visited the site
-    var visitedBefore = localStorage.getItem("visitedBefore");
-
-    if (!visitedBefore) {
-        // Show the pop-up form if it's the user's first visit
-        document.getElementById("popup-container").style.display = "block";
-    }
-
-    // Load the content of auth.html into the pop-up container
-    var popupContent = document.querySelector('.popup-content');
-    var authContent = document.createElement('object');
-    authContent.setAttribute('type', 'text/html');
-    authContent.setAttribute('data', '../BooksHub/User-Auth/auth.html');
-    authContent.style.width = '100%';
-    authContent.style.height = '100%';
-    authContent.onload = function() {
-        // Once auth.html content is loaded, set up event listeners
-        setupEventListeners();
-    };
-    popupContent.appendChild(authContent);
-});
-
-function setupEventListeners() {
-    // Prevent the default form submission behavior for sign-up form
-    document.getElementById("sign-up-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        // Perform sign-up logic here
-        // After successful sign-up, close the pop-up
-        closePopup();
-    });
-
-    // Prevent the default form submission behavior for login form
-    document.getElementById("login-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        // Perform login logic here
-        // After successful login, close the pop-up
-        closePopup();
-    });
-
-    // Prevent users from closing the pop-up without completing the sign-up or login
-    window.addEventListener("beforeunload", function(event) {
-        var visitedBefore = localStorage.getItem("visitedBefore");
-        if (!visitedBefore && event.currentTarget.location.pathname === '/') {
-            // Prompt the user to complete the sign-up or login
-            event.preventDefault();
-            event.returnValue = '';
-        }
-    });
-
-    // Initialize the Google Sign-In client with your client ID
-    function initGoogleSignIn() {
-        gapi.load('auth2', function() {
-            var auth2 = gapi.auth2.init({
-                client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com' // Replace with your client ID
-            });
-        });
-    }
-
-    // Trigger Google Sign-In for sign-up
-    document.getElementById("google-signup-btn").addEventListener("click", function(event) {
-        signUpWithGoogle();
-    });
-
-    // Trigger Google Sign-In for login
-    document.getElementById("google-login-btn").addEventListener("click", function(event) {
-        loginWithGoogle();
-    });
-
-    // Load Google Sign-In client when the page is loaded
-    initGoogleSignIn();
-}
-
-function closePopup() {
-    // Close the pop-up form
-    document.getElementById("popup-container").style.display = "none";
-    // Set a flag in localStorage to indicate that the user has visited before
-    localStorage.setItem("visitedBefore", true);
-}
-
-// Initialize the Google Sign-In client with your client ID
-function initGoogleSignIn() {
-    gapi.load('auth2', function() {
-        var auth2 = gapi.auth2.init({
-            client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com' // Replace with your client ID
-        });
-    });
-}
-
-// Trigger Google Sign-In for sign-up
-function signUpWithGoogle() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signIn().then(function(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        var email = profile.getEmail();
-        // Use the email for sign-up process
-        // You can also fetch other user details like name, etc., if needed
-    });
-}
-
-// Trigger Google Sign-In for login
-function loginWithGoogle() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signIn().then(function(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        var email = profile.getEmail();
-        // Use the email for login process
-    });
-}
-
-</script>
-
     <button onclick="toggleDarkMode()" id="Light-Dark">
         <img src="../BooksHub/Images/LightTheme.svg" alt="Lightmode" class="light-image">
         <img src="../BooksHub/Images/DarkTheme.svg" alt="Darkmode" class="dark-image">
@@ -167,7 +43,9 @@ function loginWithGoogle() {
           <li><a href="../BooksHub/WebPages/contact.html">Contact</a></li>
           <li><a href="../BooksHub/WebPages/about.html">About</a></li>
           <li><a href="../BooksHub/WebPages/Clubs.html">Club</a></li>
+          <li id="Submit-EB"><a href="https://forms.gle/V8p62WaJdHcXMPWB6" target="_blank" >Submit Book</a></li>
         </ul>
+        <a href="https://forms.gle/V8p62WaJdHcXMPWB6" target="_blank" class="E-BookSub">Submit Your E-Book</a>
       </nav>
 
   <!-- SITE SMALL INTO -->

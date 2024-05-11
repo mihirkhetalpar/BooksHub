@@ -373,22 +373,26 @@ button {
 
 /* Navbar styles */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 100%;
-    background: rgb(212 143 255 / 30%);
-    box-shadow: 0 8px 32px 0 rgba(128, 0, 255, 0.37);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.18);
-    z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 100%;
+  background-color: rgb(255 255 255);
+  box-shadow: 0 8px 32px 0 rgb(128 0 255 / 24%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  z-index: 2;
+}
+
+.dark-mode .navbar{
+  background-color: #000000;
 }
 
 #mainsitelogo {
@@ -450,12 +454,20 @@ button {
     letter-spacing: 0.5px;
     padding: 0 10px;
     background-color: transparent !important;
-    color: var(--Common-Text-Color);
+    color: var(--Dark-Primary-Color);
+}
+
+.nav-links a:hover{
+  color: rgb(122, 122, 122);
 }
 
 /* DARK MODE */
 .dark-mode .nav-links a {
-    color: var(--Dark-Button-or-Highlight-Color);
+    color: var(--Light-Primary-Color);
+}
+
+.dark-mode .nav-links a:hover{
+  color: rgb(122, 122, 122);
 }
 
 .E-BookSub {
@@ -469,7 +481,7 @@ button {
     justify-content: center;
     border: 2px solid;
     border-radius: 10px;
-    left: 86%;
+    left: 85%;
     z-index: 2;
 }
 
@@ -784,7 +796,7 @@ button {
     left: 50%;
     transform: translate(-50%, 150%);
     -webkit-text-stroke: 1px rgb(33 7 69);
-    color: var(--Common-Text-Color);
+    color: var(--Dark-Primary-Color);
     font-size: 120px;
     font-weight: 900;
     font-style: italic;
@@ -795,7 +807,7 @@ button {
 }
 
 .dark-mode #FBText {
-    color: var(--Dark-Button-or-Highlight-Color);
+    color: var(--Light-Primary-Color);
 }
 
 @media (max-width: 400px) {
@@ -1134,7 +1146,7 @@ button {
     position: absolute;
     left: 45%;
     width: 165px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .svgbox img:nth-child(2) {
@@ -1177,7 +1189,7 @@ button {
 
 .card2 p {
   position: absolute;
-  top: 0px;
+  top: -10px;
   left: 45%;
   width: 150px;
   font-size: 1rem;
@@ -1219,11 +1231,11 @@ button {
   cursor: default;
   margin: 0px;
   padding: 0px;
-  top: 35%;
+  top: 52%;
   width: 100%;
   -webkit-text-stroke: 1px #281048;
-  color: var(--Common-Text-Color);
-  font-size: 12rem;
+  color: var(--Dark-Primary-Color);
+  font-size: 8rem;
   font-weight: 900;
   font-style: italic;
   justify-content: center;
@@ -1233,7 +1245,7 @@ button {
 }
 
 .dark-mode #BookHead {
-    color: var(--Dark-Button-or-Highlight-Color);
+    color: var(--Light-Primary-Color);
 }
 
 @media (max-width: 400px) {
@@ -1249,10 +1261,10 @@ button {
   grid-template-columns: repeat(4, 1fr);
   height: 0px;
   width: 0px;
-  top: 70%;
+  top: 90%;
   left: 60px;
   row-gap: 150px;
-  column-gap: 235px;
+  column-gap: 85px;
 }
 
 @media (max-width: 400px) {
@@ -1414,8 +1426,8 @@ button {
 .commentSection {
   position: absolute;
   width: 50%;
-  top: 220%;
-  left: -90px;
+  top: 290%;
+  left: 10px;
 }
 
 @media (max-width: 400px) {
@@ -1461,150 +1473,84 @@ button {
 
 /* CONTACT PAGE START HERE 👇 */
 
-.contactglass{
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-    height: 500px;
-    width: 400px;
-    transform: translate(-50%, -50%);
-    background: rgb(0 0 0 / 20%);
-    box-shadow: 0 8px 32px 0 rgb(255 255 255 / 37%);
-    backdrop-filter: blur( 2.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    overflow: hidden;
+.contactglass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  padding: 20px;
+  background: var(--Light-Primary-Color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.contact{
-    position: absolute;
-    top: 18%;
-    left: 50%;
-    transform: translate(-50%, -210%);
-    font-size: 3rem;
-    width: max-content;
+.dark-mode .contactglass{
+  background-color: black;
 }
 
-#ContactForm{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    top: 80px;
-    width: 400px;
-    height: 435px;
-    background-color: #ffffff10;
-    overflow: hidden;
-    border-radius: 10px;
+.contact {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: black;
 }
 
-#fname::placeholder,
-#lname::placeholder,
-#email::placeholder,
-#message::placeholder {
-    color: var(--Dark-Button-or-Highlight-Color);
-  text-transform: uppercase;
+.dark-mode .contact{
+  color: white;
 }
 
-#fname{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    width: 80%;
-    height: 20px;
-    border-radius: 15px;
-    padding-left: 10px;
-    border: 5px solid rgb(255, 0, 183);
-    font-family: 'lemon';
-    background-color: #00e5ff1f;
-    box-shadow: 0px 0px 10px, 0px 0px 10px;
-    color: var(--Dark-Button-or-Highlight-Color);
-    text-transform: capitalize;
+#ContactForm {
+  display: flex;
+  flex-direction: column;
 }
 
-#lname{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    width: 80%;
-    height: 20px;
-    border-radius: 15px;
-    padding-left: 10px;
-    border: 5px solid rgb(255, 0, 183);
-    font-family: 'lemon';
-    background-color: #00e5ff1f;
-    box-shadow: 0px 0px 10px, 0px 0px 10px;
-    color: var(--Dark-Button-or-Highlight-Color);
-    text-transform: capitalize;
+label {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 
-#email{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    width: 80%;
-    height: 20px;
-    border-radius: 15px;
-    padding-left: 10px;
-    border: 5px solid rgb(255, 0, 183);
-    font-family: 'lemon';
-    background-color: #00e5ff1f;
-    box-shadow: 0px 0px 10px, 0px 0px 10px;
-    color: var(--Dark-Button-or-Highlight-Color);
-    text-transform: lowercase;
+input[type="text"],
+textarea,
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
-#message{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0px);
-    width: 80% !important;
-    height: 100px !important;
-    border-radius: 15px;
-    padding-left: 10px;
-    border: 5px solid rgb(255, 0, 183);
-    resize: none;
-    font-family: 'lemon';
-    background-color: #00e5ff1f;
-    box-shadow: 0px 0px 10px, 0px 0px 10px;
-    color: var(--Dark-Button-or-Highlight-Color);
-    text-transform: capitalize;
+select {
+  appearance: none;
+  /* background-size: 12px;
+  padding-right: 30px; */
+  color: black;
 }
 
-#CountrySelect{
-    position: relative;
-    color: var(--Dark-Button-or-Highlight-Color);
-    font-family: 'lemon';
-    background-color: #00e5ff1f;
-    box-shadow: 0px 0px 10px, 0px 0px 10px;
-    text-align: center;
-    width: 40%;
-    border-radius: 15px;
-    left: 35px;
-    text-transform: capitalize;
+.dark-mode select{
+  color: white;
 }
 
-#CountrySelect::-webkit-scrollbar {
-    width: 0;
+.Contact-Button {
+  align-self: center;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.Contact-Button{
-    position: relative;
-    color: var(--Dark-Button-or-Highlight-Color);
-    font-family: 'lemon';
-    background-color: #00e5ff1f;
-    box-shadow: 0px 0px 10px, 0px 0px 10px;
-    text-align: center;
-    width: 30%;
-    border-radius: 15px;
-    left: 216px;
-    top: -18px;
-    text-transform: capitalize;
-    border: none;
+.Contact-Button:hover {
+  background-color: #45a049;
 }
 
-@media (max-width: 400px) {
+
+/* @media (max-width: 400px) {
   .contactglass {
     display: block;
     position: absolute;
@@ -1632,7 +1578,7 @@ button {
   border-radius: 10px;
   overflow: hidden;
  }
-}
+} */
 
 /* CONTACT PAGE END HERE 👆 */
 
@@ -1648,21 +1594,24 @@ button {
   .aboutext {
     display: flex;
     position: absolute;
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: 900;
-    color: var(--Common-Text-Color);
-    -webkit-text-stroke: 2px rgb(33 7 69);
+    color: #ffffff;
+    -webkit-text-stroke: 2px rgb(0 0 0);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
     top: 50px;
-    left: 670px;
-    padding: 0px;
-    margin: 0px;
+    left: 450px;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: max-content;
     user-select: none;
   }
 
   .dark-mode .aboutext{
-   color: var(--Dark-Button-or-Highlight-Color);
+    color: black;
+    -webkit-text-stroke: 2px rgb(255 255 255);
   }
   
   @media (max-width:400px) {
@@ -1721,20 +1670,21 @@ button {
   .backmission {
     display: flex;
     position: absolute;
-    top: 960px;
+    top: 1080px;
     font-weight: 900;
-    font-size: 100px;
-    left: 222px;
+    font-size: 5rem;
+    left: 190px;
     padding: 0px;
     margin: 0px;
-    color: var(--Common-Text-Color);
-    -webkit-text-stroke: 2px rgb(33 7 69);
+    color: #ffffff;
+    -webkit-text-stroke: 2px rgb(0 0 0);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
     width: max-content;
   }
 
   .dark-mode .backmission{
-   color: var(--Dark-Button-or-Highlight-Color);
+    color: black;
+    -webkit-text-stroke: 2px rgb(255 255 255);
   }
   
   @media (max-width:400px) {
@@ -1769,7 +1719,7 @@ button {
     position: relative;
     font-weight: 900;
     font-size: 31px;
-    top: -815px;
+    top: -780px;
     color: var(--Light-Text-or-Content-Color);
     margin: 0px;
     width: 80%;
@@ -1797,18 +1747,19 @@ button {
   .team-member {
     display: block;
     position: absolute;
-    top: 2175px;
-    font-size: 90px;
+    top: 2420px;
+    font-size: 5rem;
     font-weight: 900;
-    color: var(--Common-Text-Color);
-    -webkit-text-stroke: 5px rgb(33 7 69);
+    color: #ffffff;
+    -webkit-text-stroke: 2px rgb(0 0 0);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
-    left: 490px;
+    left: 430px;
     width: max-content;
   }
 
   .dark-mode .team-member{
-   color: var(--Dark-Button-or-Highlight-Color);
+    color: black;
+    -webkit-text-stroke: 2px rgb(255 255 255);
   }
   
   .aboutusp3 {
@@ -1816,8 +1767,8 @@ button {
     position: absolute;
     font-style: italic;
     font-weight: 900;
-    height: 165vh;
-    top: 2310px;
+    height: 230vh;
+    top: 2500px;
     width: 100vw;
   }
 
@@ -1883,11 +1834,10 @@ button {
   .box1 {
     position: absolute;
     height: 360px;
-    width: 1000px;
+    width: 900px;
     top: 32px;
     border: 5px solid red;
     border-radius: 200px;
-    background: url(../StyleFile/IMG/Polygon\ Luminary.svg);
     left: 175px;
     filter: brightness(0.8);
   }
@@ -1906,20 +1856,21 @@ button {
     font-weight: 900;
     font-style: italic;
     font-size: 50px;
-    color: var(--Common-Text-Color);
-    -webkit-text-stroke: 2px rgb(33 7 69);
+    color: var(--Dark-Text-or-Content-Color);
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
     overflow: hidden;
     white-space: nowrap;
-    border-right: 5px solid var(--Common-Text-Color);
+    border-right: 5px solid var(--Dark-Primary-Color);
     animation: typewriter 5s steps(100) infinite alternate;
-    background-color: #005dff1f;
+    background-color: #005eff25;
     box-shadow: 2px 2px 10px, -2px -2px 10px;
   }
 
   .dark-mode #typewriter1 h1{
-   color: var(--Dark-Button-or-Highlight-Color);
-   border-right: 5px solid var(--Dark-Button-or-Highlight-Color);
+    color: #000000;
+    border-right: 5px solid #ffffff;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
   }
   
   #typewriter2 {
@@ -1935,12 +1886,12 @@ button {
     font-weight: 900;
     font-style: italic;
     font-size: 50px;
-    color: var(--Common-Text-Color);
-    -webkit-text-stroke: 2px rgb(33 7 69);
+    color: var(--Dark-Text-or-Content-Color);
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+    border-right: 5px solid var(--Dark-Primary-Color);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 5px solid var(--Common-Text-Color);
     animation: typewriter 3s steps(100) infinite alternate;
     left: 50px;
     top: 15px;
@@ -1949,8 +1900,9 @@ button {
   }
 
    .dark-mode #typewriter2 h1{
-   color: var(--Dark-Button-or-Highlight-Color);
-   border-right: 5px solid var(--Dark-Button-or-Highlight-Color);
+    color: #000000;
+    border-right: 5px solid #ffffff;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
   }
   
   #typewriter3 {
@@ -1967,22 +1919,23 @@ button {
     font-weight: 900;
     font-style: italic;
     font-size: 50px;
-    color: var(--Common-Text-Color);
-    -webkit-text-stroke: 2px rgb(33 7 69);
+    color: var(--Dark-Text-or-Content-Color);
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
     filter: drop-shadow(2px 2px 6px rgb(191, 191, 191));
+    border-right: 5px solid var(--Dark-Primary-Color);
     overflow: hidden;
     white-space: nowrap;
-    border-right: 5px solid var(--Common-Text-Color);
     animation: typewriter 5s steps(100) infinite alternate;
     top: 15px;
-    left: 370px;
+    left: 0px;
     background-color: #005dff1f;
     box-shadow: 2px 2px 10px, -2px -2px 10px;
   }
 
   .dark-mode #typewriter3 h1{
-    color: var(--Dark-Button-or-Highlight-Color);
-    border-right: 5px solid var(--Dark-Button-or-Highlight-Color);
+    color: #000000;
+    border-right: 5px solid #ffffff;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
    }
   
   @media (max-width:400px) {
@@ -2098,10 +2051,10 @@ button {
   
   .contritext1{
     position: absolute;
-    top: 90px;
-    width: 825px;
+    top: 100px;
+    width: 710px;
     left: 355px;
-    font-size: 32px;
+    font-size: 1.9rem;
     font-weight: 900;
     color: var(--Light-Text-or-Content-Color);
   }
@@ -2254,12 +2207,11 @@ button {
   .box2 {
     position: absolute;
     height: 360px;
-    width: 1000px;
+    width: 900px;
     top: 32px;
     left: 130px;
     border: 5px solid red;
     border-radius: 200px;
-    background: url(../StyleFile/IMG/Icon\ Grid.svg);
     filter: brightness(0.8);
   }
   
@@ -2314,9 +2266,9 @@ button {
   .contritext2 {
     position: absolute;
     top: 100px;
-    width: 710px;
+    width: 625px;
     left: 360px;
-    font-size: 30px;
+    font-size: 1.8rem;
     font-weight: 900;
     color: var(--Light-Text-or-Content-Color);
   }
@@ -2471,12 +2423,11 @@ button {
   .box3 {
     position: absolute;
     height: 360px;
-    width: 1000px;
+    width: 900px;
     top: 32px;
-    left: 380px;
+    left: 20px;
     border: 5px solid red;
     border-radius: 200px;
-    background: url(../StyleFile/IMG/Contour\ Line.svg);
     filter: brightness(0.8);
   }
   
@@ -2529,10 +2480,10 @@ button {
   
   .contritext3 {
     position: absolute;
-    top: 100px;
-    width: 740px;
-    left: 585px;
-    font-size: 34px;
+    top: 125px;
+    width: 680px;
+    left: 235px;
+    font-size: 2rem;
     font-weight: 900;
     color: var(--Light-Text-or-Content-Color);
   }
@@ -2573,7 +2524,7 @@ button {
     cursor: pointer;
     border-radius: 30px;
     top: 100px;
-    left: 255px;
+    left: -80px;
   }
   
   .cover-image3 {
@@ -2735,16 +2686,33 @@ button {
 
 #sendButton {
   position: absolute;
-  background-color: transparent;
+  background-color: red;
   border: transparent;
   cursor: pointer;
-  left: 97.2%;
+  left: 96.6%;
+  height: 40px;
+  width: 33px;
+  background-color: black;
+}
+
+.dark-mode #sendButton{
+  background-color: rgb(255, 255, 255);
+}
+
+#sendButton:hover{
+  background-color: red;
 }
 
 #sendButton img{
   position: absolute;
   height: 35px;
   top: 3px;
+  left: 0px;
+  filter: grayscale(100%);
+}
+
+#sendButton img:hover{
+  filter: grayscale(0%);
 }
 
 #chat {
@@ -2766,7 +2734,7 @@ button {
   display: flex;
   flex-direction: column;
   top: 105px;
-  height: 80vh;
+  height: 70vh;
   width: 98.7vw;
   overflow-y: scroll;
   padding: 10px;
@@ -2775,7 +2743,7 @@ button {
 #messageForm{
   display: block;
   position: absolute;
-  top: 93%;
+  top: 90%;
   height: 40px;
   width: 98%;
   margin-left: 1%;
@@ -2790,17 +2758,19 @@ button {
 
 #messageForm #messageInput{
   position: absolute;
-  top: 4px;
-  height: 30px;
+  top: 0px;
+  height: 20px;
   left: 15px;
-  width: 90.5%;
+  width: 90%;
   font-family: 'lemon';
   font-size: 1rem;
   color: #5E96FF;
   text-transform: capitalize;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0px;
   border: none;
+  appearance: none;
   background-color: transparent;
 }
 
@@ -2863,22 +2833,29 @@ button {
   appearance: none;
   text-rendering: unset;
   border: none;
-  background-color: transparent;
-  top: -2px;
-  left: 95%;
+  background-color: black;
+  top: 0px;
+  width: 50px;
+  height: 40px;
+  left: 92.5%;
   font-size: 30px;
   filter: grayscale(100%);
   cursor: pointer;
 }
 
+.dark-mode #emoji{
+  background-color: rgb(255, 255, 255);
+}
+
 #emoji:hover {
   filter: grayscale(0%);
+  background-color: rgb(166, 0, 255);
 }
 
 #logoutButton{
   position: absolute;
   top: 62px;
-  left: 94%;
+  left: 93%;
   height: 40px;
   width: 100px;
   background-color: red;
@@ -2901,8 +2878,8 @@ button {
 emoji-picker{
   position: fixed;
   height: 300px;
-  top: 61.8%;
-  left: 83.5%;
+  top: 47.5%;
+  left: 76.5%;
 }
 
 
@@ -3030,4 +3007,12 @@ footer {
     font-style: italic;
     width: 100%;
     text-align: center;
+}
+
+.footer-bottom h1{
+  color: var(--Dark-Primary-Color);
+}
+
+.dark-mode .footer-bottom h1{
+  color: var(--Light-Primary-Color);
 }

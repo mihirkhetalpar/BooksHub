@@ -489,6 +489,34 @@ button {
     display: none;
 }
 
+#PA-Form{
+  display: flex;
+  position: absolute;
+  font-style: italic;
+  width: 115px;
+  font-weight: 900;
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  top: 60px;
+  left: 0px;
+  color: var(--Common-Text-Color);
+  cursor: pointer;
+  background-color: var(--Light-Text-or-Content-Color);
+}
+
+.fd-form{
+  background-color: transparent !important;
+  height: 40px !important;
+  width: 100px !important;
+  color: transparent !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: 0px !important;
+}
+
 @media (max-width:400px) {
     .menu-toggle {
         display: flex;

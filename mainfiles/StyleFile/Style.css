@@ -495,13 +495,13 @@ button {
   font-style: italic;
   width: 115px;
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: center;
   justify-content: center;
   border: 2px solid rgb(255, 0, 0);
   border-radius: 10px;
-  top: 60px;
-  left: 0px;
+  top: 70px;
+  left: 20px;
   color: var(--Common-Text-Color);
   cursor: pointer;
   background-color: var(--Light-Text-or-Content-Color);
